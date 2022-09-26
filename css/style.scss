@@ -48,7 +48,7 @@ header {
                 text-decoration: none;
             }
         }
-        i.menuHamburguesa {
+        div.menuHamburguesa {
             display: none;
         }
     }
@@ -239,11 +239,11 @@ footer {
             nav {
                 display: none;
             }
-            i.menuHamburguesa {
+            div.menuHamburguesa {
                 color: $font_lightGrey;
                 display: block;
                 font-size: 2.5rem;
-                padding-right: 5rem;
+                // padding-right: 5rem;
             }
         }
     }
@@ -316,7 +316,10 @@ footer {
         div.fondoAmarillo {
             display: flex;
             justify-content: space-between;
-            padding: 2rem;
+            text-align: end;
+        }
+        div.menuHamburguesa {
+            align-items: end;
         }
     }
 

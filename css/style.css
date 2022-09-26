@@ -36,7 +36,7 @@ header div.fondoAmarillo nav a {
   padding: 0 1rem;
   text-decoration: none;
 }
-header div.fondoAmarillo i.menuHamburguesa {
+header div.fondoAmarillo div.menuHamburguesa {
   display: none;
 }
 
@@ -257,11 +257,10 @@ footer div.legales {
   header div.fondoAmarillo nav {
     display: none;
   }
-  header div.fondoAmarillo i.menuHamburguesa {
+  header div.fondoAmarillo div.menuHamburguesa {
     color: #f3f3f3;
     display: block;
     font-size: 2.5rem;
-    padding-right: 5rem;
   }
   main.banner {
     align-items: center;
@@ -310,7 +309,10 @@ footer div.legales {
   header div.fondoAmarillo {
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    text-align: end;
+  }
+  header div.menuHamburguesa {
+    align-items: end;
   }
   main.banner div.text h2 {
     font-size: 1.5rem;
