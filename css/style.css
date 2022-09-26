@@ -264,6 +264,7 @@ footer div.legales {
   }
   main.banner {
     align-items: center;
+    text-align: center;
   }
   main.banner div.text p {
     background-color: #fbfaf6;
