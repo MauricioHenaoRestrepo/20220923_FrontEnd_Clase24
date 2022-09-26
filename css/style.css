@@ -261,6 +261,7 @@ footer div.legales {
     color: #f3f3f3;
     display: block;
     font-size: 2.5rem;
+    padding-right: 5rem;
   }
   main.banner {
     align-items: center;
@@ -306,6 +307,11 @@ footer div.legales {
   }
 }
 @media (max-width: 480px) {
+  header div.fondoAmarillo {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+  }
   main.banner div.text h2 {
     font-size: 1.5rem;
     padding: 0.6rem 1rem;
