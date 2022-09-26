@@ -1,0 +1,322 @@
+// https://www.figma.com/file/31NtnGFVE8XyUbfA8Esktw/Petshop
+
+// GLOBALES
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import 'variables.scss';
+@import 'mixins.scss';
+
+* {
+    // border: 1px solid red;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+// HEADER
+header {
+    div.fondoOscuro {
+        background-color: $bg_darkGrey;
+        color: $font_lightGrey;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 5rem;
+        div.containerSelect {
+            select {
+                background-color: $bg_darkGrey;
+                border: none;
+                color: $font_lightGrey;
+            }
+        }
+    }
+    div.fondoAmarillo {
+        align-items: center;
+        background-color: $bg_primary;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+        img {
+            height: 2.5rem;
+        }
+        nav {
+            a {
+                color: $font_lightGrey;
+                padding: 0 1rem;
+                text-decoration: none;
+            }
+        }
+        i.menuHamburguesa {
+            display: none;
+        }
+    }
+}
+
+// MAIN
+main.banner {
+    align-items: flex-end;
+    background-image: url('../img/principal.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    padding: 0 5rem;
+    div.text {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        h2 {
+            background-color: $bg_lightGrey;
+            border-radius: 5px;
+            color: $font-secondary;
+            font-size: 2rem;
+            padding: 0.6rem 2rem;
+        }
+        p {
+            color: $font_secondary;
+            font-size: 1rem;
+            padding: 0.6rem 0;
+        }
+        div.btn {
+            margin-top: 0.3rem;
+            a {
+                @include boton();
+            }
+        }
+    }
+}
+
+// DESCTACADOS
+section.destacados {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    i {
+        color: $font_primary;
+        font-size: 6rem;
+        margin-top: 2rem;
+    }
+    h2 {
+        color: $font_secondary;
+        font-size: 2.5rem;
+        padding: 1rem 0;
+    }
+    nav {
+        a {
+            color: $font_darkGrey;
+            margin: 25px 0px;
+            text-decoration: none;
+        }
+    }
+}
+
+//ARTICLE-CARDS
+article.cards {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+    text-align: center;
+    div.card {
+        background-color: $bg_lightGrey;
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 2rem;
+        p.name {
+            color: $font-secondary;
+        }
+        p.price {
+            color: $font-primary;
+        }
+    }
+}
+
+// CONTACTANOS
+form.contactanos {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+    h3 {
+        color: $font-secondary;
+        font-size: 1.4rem;
+    }
+    input {
+        @include inputs;
+    }
+    .divBotones {
+        display: flex;
+        justify-content: space-around;
+        width: 15rem;
+        button.btnGris {
+            @include boton($font-darkGrey, $font-lightGrey, 25px);
+            width: 7rem;
+        }
+        button.btnAmarillo {
+            @include boton($bg_primary, $font-lightGrey, 25px);
+            width: 7rem;
+        }
+    }
+}
+
+// SUSCRIBETE
+section.suscribete {
+    align-items: center;
+    background-color: $bg_primary;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 2rem;
+    div.imgSobre {
+        align-items: center;
+        color: $font-lightGrey;
+        display: flex;
+        img {
+            margin-right: 0.5rem;
+        }
+    }
+    form.correo {
+        display: flex;
+        flex-direction: row;
+        input {
+            @include inputs;
+            background-color: $bg-lightGrey;
+        }
+        button {
+            @include boton($bg_secondary, $font-lightGrey, 25px);
+            margin: 5px;
+        }
+    }
+}
+
+/* FOOTER */
+footer {
+    background-color: $bg_secondary;
+    padding-top: 0.5rem;
+    div.contactos {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 1rem;
+        div.info {
+            img {
+                display: flex;
+                flex-direction: column;
+                height: 4.5rem;
+                margin: 0.5rem;
+            }
+        }
+
+        img {
+            height: 2.5rem;
+        }
+    }
+    div.legales {
+        background-color: #222222;
+        color: #ffffff;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+// MEDIAQUERIES
+@media (max-width: 768px) {
+    // HEADER
+    header {
+        div.fondoOscuro {
+            display: none;
+        }
+        div.fondoAmarillo {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 3rem;
+            img {
+                height: 2rem;
+            }
+            nav {
+                display: none;
+            }
+            i.menuHamburguesa {
+                color: $font_lightGrey;
+                display: block;
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    //MAIN
+    main.banner {
+        align-items: center;
+        div.text {
+            p {
+                background-color: $bg-lightGrey;
+                border-radius: 5px;
+                margin: 1rem;
+                padding: 0.5rem;
+            }
+        }
+    }
+
+    // DESTACADOS
+    section.destacados {
+        i {
+            font-size: 5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+    }
+
+    // CARDS
+    article.cards {
+        flex-wrap: wrap;
+        div.card {
+            margin: 5px;
+        }
+    }
+
+    // SUSCRIBETE
+    section.suscribete {
+        flex-direction: column;
+        padding: 10px 2px;
+    }
+
+    // FOOTER
+    footer {
+        div.contactos {
+            display: flex;
+            flex-direction: column-reverse;
+            margin: 2rem 0;
+            div.info {
+                img {
+                    height: 3rem;
+                }
+            }
+            img.logo1 {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2rem;
+            }
+        }
+        div.legales {
+            i {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    //MAIN
+    main.banner {
+        div.text {
+            h2 {
+                font-size: 1.5rem;
+                padding: 0.6rem 1rem;
+            }
+        }
+    }
+}

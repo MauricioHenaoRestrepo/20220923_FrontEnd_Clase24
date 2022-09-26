@@ -1,0 +1,22 @@
+// Mixins
+@mixin boton($fondo: $bg_primary, $letra: $font-lightGrey, $radio: 5px) {
+    background-color: $fondo;
+    border: none;
+    border-radius: $radio;
+    color: $letra;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+}
+
+@mixin inputs {
+    background-color: $bg_secondary;
+    border: none;
+    border-radius: 1rem;
+    color: $font-lightGrey;
+    margin: 5px;
+    padding: 0.6rem;
+    width: 20rem;
+}
