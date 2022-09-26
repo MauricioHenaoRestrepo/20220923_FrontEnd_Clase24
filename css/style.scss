@@ -119,6 +119,7 @@ article.cards {
     display: flex;
     justify-content: center;
     margin: 3rem 0;
+    padding-bottom: 2rem;
     text-align: center;
     div.card {
         background-color: $bg_lightGrey;
@@ -130,6 +131,7 @@ article.cards {
         }
         p.price {
             color: $font-primary;
+            padding-bottom: 2rem;
         }
     }
 }
