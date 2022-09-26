@@ -312,7 +312,9 @@ footer div.legales {
     text-align: end;
   }
   header div.menuHamburguesa {
-    align-items: end;
+    color: #f3f3f3;
+    display: block;
+    font-size: 2.5rem;
   }
   main.banner div.text h2 {
     font-size: 1.5rem;
